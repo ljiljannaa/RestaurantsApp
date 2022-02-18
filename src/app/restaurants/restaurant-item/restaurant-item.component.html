@@ -1,0 +1,17 @@
+<h4 (click)="openMenuDialog()" class="pointerCursor">{{restaurant.name}}</h4>
+<div class="row">
+    <div class="col-12">
+        {{restaurant.description}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        Rating:  <app-rating [grade]="restaurant.rating" [fullIcon]="'star-full.png'" [emptyIcon]="'star-empty.png'"></app-rating>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        Price: <app-rating [grade]="restaurant.price" [fullIcon]="'coin-full.png'" [emptyIcon]="'coin-empty.png'"></app-rating>
+    </div>
+</div>
+<br>

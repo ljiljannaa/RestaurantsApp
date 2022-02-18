@@ -1,0 +1,14 @@
+
+
+<ul class="pagination">
+    
+    <li [ngClass]="{'disabled': page <= 1}" class="page-item">
+        <a class="page-link" (click)="onPreviousClicked()">Previous</a>
+    </li>
+    <li class="page-item" *ngFor="let i of pages" (click)="pageSelected(i)" [ngClass]="{'active': i==page}">
+    	<a class="page-link">{{i}}</a>
+    </li>
+    <li  [ngClass]="{'disabled': collectionSize <= page * pageSize}" class="page-item">
+        <a class="page-link" (click)="onNextClicked()">Next</a>
+    </li>
+  </ul>

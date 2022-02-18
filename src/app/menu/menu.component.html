@@ -1,0 +1,45 @@
+<div>
+    <div class="modal-header">
+        <h2 class="modal-title">{{restaurant.name}}</h2>
+
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-6">
+                Working Hours
+                <ul>
+                    <li *ngIf="restaurant.days['1']">Monday: {{restaurant.days['1'].opens}}h - {{restaurant.days['1'].closes}}h</li>
+                    <li *ngIf="restaurant.days['2']">Tuesday: {{restaurant.days['2'].opens}}h - {{restaurant.days['2'].closes}}h</li>
+                    <li *ngIf="restaurant.days['3']">Wednesday: {{restaurant.days['3'].opens}}h - {{restaurant.days['3'].closes}}h</li>
+                    <li *ngIf="restaurant.days['4']">Thursday: {{restaurant.days['4'].opens}}h - {{restaurant.days['4'].closes}}h</li>
+                    <li *ngIf="restaurant.days['5']">Friday: {{restaurant.days['5'].opens}}h - {{restaurant.days['5'].closes}}h</li>
+                    <li *ngIf="restaurant.days['6']">Saturday: {{restaurant.days['6'].opens}}h - {{restaurant.days['6'].closes}}h</li>
+                    <li *ngIf="restaurant.days['7']">Sunday: {{restaurant.days['7'].opens}}h - {{restaurant.days['7'].closes}}h</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                Address
+                <ul>
+                    <li>{{restaurant.location}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col" class="text-right">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of menu.results.items">
+                    <td>{{item.name}}</td>
+                    <td class="text-right">{{item.price}}$</td>
+                  </tr>
+              </table>
+        </div>
+
+    </div>
+</div>
+
